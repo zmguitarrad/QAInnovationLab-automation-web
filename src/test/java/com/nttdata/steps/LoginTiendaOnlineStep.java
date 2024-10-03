@@ -1,10 +1,14 @@
 package com.nttdata.steps;
 
+import com.nttdata.page.InventoryPage;
 import com.nttdata.page.LoginTiendapage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LoginTiendaOnlineStep {
+
+
     WebDriver driver;
 
     public LoginTiendaOnlineStep(WebDriver driver){
@@ -42,5 +46,41 @@ public class LoginTiendaOnlineStep {
         subcategoriaInput.sendKeys(subcategoria);
         subcategoriaInput.click();
 
+    }
+
+    public void elegirElemento() {
+        WebElement botonElemento = driver.findElement(LoginTiendapage.clicElemento);
+        botonElemento.click();
+    }
+
+    public void anadirelemento(int elemento) {
+        WebElement addEle = driver.findElement(LoginTiendapage.addElemto);
+        addEle.sendKeys(Keys.CONTROL + "a");
+        addEle.sendKeys(Keys.BACK_SPACE);
+        addEle.sendKeys(String.valueOf(elemento));
+    }
+
+
+    public void comprarElem() {
+        WebElement boton = driver.findElement(LoginTiendapage.agregarCarrito);
+        boton.click();
+    }
+
+    public void confirmarValor() {
+
+    }
+
+    public void validarEnvio() {
+        WebElement boton = driver.findElement(LoginTiendapage.enviarButton);
+        boton.click();
+    }
+
+    public void finalizarCompra() {
+        WebElement boton = driver.findElement(LoginTiendapage.enviarButton);
+        boton.click();
+    }
+
+    public String getTitulo() {
+        return this.driver.findElement(LoginTiendapage.productsTitle).getText();
     }
 }
