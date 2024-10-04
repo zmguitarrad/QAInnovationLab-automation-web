@@ -1,6 +1,5 @@
 package com.nttdata.steps;
 
-import com.nttdata.page.InventoryPage;
 import com.nttdata.page.LoginTiendapage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -66,21 +65,17 @@ public class LoginTiendaOnlineStep {
         boton.click();
     }
 
-    public void confirmarValor() {
+//    public void confirmarValor() {
+//        WebElement boton = driver.findElement(LoginTiendapage.validar);
+//        boton.click();
+//
+//    }
 
-    }
-
-    public void validarEnvio() {
-        WebElement boton = driver.findElement(LoginTiendapage.enviarButton);
-        boton.click();
-    }
 
     public void finalizarCompra() {
         WebElement boton = driver.findElement(LoginTiendapage.enviarButton);
         boton.click();
     }
 
-    public String getTitulo() {
-        return this.driver.findElement(LoginTiendapage.productsTitle).getText();
-    }
+
 }

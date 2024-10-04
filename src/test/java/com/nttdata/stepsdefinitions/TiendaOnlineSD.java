@@ -68,14 +68,15 @@ public class TiendaOnlineSD {
     @Then("valido en el popup la confirmacion del producto agregado")
     public void validoEnElPopupLaConfirmacionDelProductoAgregado() {
         LoginTiendaOnlineStep tiendastep = new LoginTiendaOnlineStep(driver);
-        tiendastep.validarEnvio();
+
+
     }
 
-    @And("valido en el popup que el monto total sea calculado correctamente")
-    public void validoEnElPopupQueElMontoTotalSeaCalculadoCorrectamente() throws InterruptedException {
-        LoginTiendaOnlineStep tiendastep = new LoginTiendaOnlineStep(driver);
-        tiendastep.confirmarValor();
-    }
+//    @And("valido en el popup que el monto total sea calculado correctamente")
+//    public void validoEnElPopupQueElMontoTotalSeaCalculadoCorrectamente() throws InterruptedException {
+//        LoginTiendaOnlineStep tiendastep = new LoginTiendaOnlineStep(driver);
+//        tiendastep.confirmarValor();
+//    }
 
     @When("finalizo la compra")
     public void finalizoLaCompra() {
@@ -85,7 +86,7 @@ public class TiendaOnlineSD {
 
     @Then("valido el titulo de la pagina del carrito")
     public void validoElTituloDeLaPaginaDelCarrito() {
-;
+
     }
 
     @And("vuelvo a validar el calculo de precios en el carrito")

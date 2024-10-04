@@ -13,6 +13,6 @@ public class LoginTiendapage {
     public  static By addElemto= By.xpath("//input[@name='qty']");
     public static By agregarCarrito= By.xpath("//button[@type='submit']");
     public static By enviarButton=By.xpath("//a[@class='btn btn-primary'and contains(text(), 'Finalizar compra')]");
-    public static By productsTitle = By.cssSelector("//div[@id='contact-link']");
+
 
 }
